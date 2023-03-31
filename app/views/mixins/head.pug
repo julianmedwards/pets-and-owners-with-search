@@ -1,4 +1,4 @@
-html(lang='en')
+mixin head
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -16,24 +16,3 @@ html(lang='en')
       integrity='sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N',
       crossorigin='anonymous'
     )
-    title Pet Dashboard
-  body
-    nav.navbar.justify-content-center.text-center.bg-secondary(
-      data-bs-theme='dark'
-    )
-      .container-fluid
-        a.navbar-brand.fs-3.me-0(href='/')= 'Pet Dashboard'
-        form#search.d-flex.mb-0(role='search', data-bs-theme='light')
-          input.form-control.me-2(
-            type='search',
-            placeholder='Search',
-            aria-label='Search'
-          )
-          button.btn.btn-outline-light= 'Search'
-    main.container.pt-3
-      h2.text-center= 'Owners'
-      include mixins/dashboard
-      +dashboard(data)
-    script(src='/js/search.js') 
-      |
-      //- onsubmit='return false'

@@ -1,0 +1,13 @@
+html(lang='en')
+  include mixins/head
+  +head
+    title Pet Dashboard
+  body
+    include mixins/nav
+    +nav
+    main.container.pt-3
+      h2.text-center= 'Owners'
+      include mixins/dashboard
+      +dashboard(data)
+  include mixins/scripts
+  +scripts

@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
     })
 
     const data = await ownersReq.json()
-    res.render('index', {data})
+    res.render('home', {data})
 })
 
 app.get('/owners/:id', async (req, res) => {
