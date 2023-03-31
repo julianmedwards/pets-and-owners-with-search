@@ -1,0 +1,9 @@
+main > .card {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.light-hover:hover {
+    background-color: var(--bs-tertiary-bg);
+}

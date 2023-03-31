@@ -1,0 +1,11 @@
+mixin dashboard(data)
+  #dash.row.row-cols-3.g-1.g-md-3.text-center
+    if data.length > 0
+    each owner in data
+      .col
+        .card
+          .card-body.light-hover
+            a.text-decoration-none.link-primary.stretched-link(
+              href=`/owners/${owner.id}`
+            )
+              h5.card-title= owner.name
