@@ -29,5 +29,7 @@ html(lang='en')
           else
             .list-group
               h5.list-group-item= 'No vaccines records found.'
+    include mixins/searchResults
+    +searchResults
   include mixins/scripts
   +scripts

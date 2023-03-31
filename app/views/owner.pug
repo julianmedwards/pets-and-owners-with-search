@@ -17,5 +17,7 @@ html(lang='en')
                     href=`/pets/${pet.id}`
                   )= pet.name
                   p= pet.type.charAt(0).toUpperCase() + pet.type.slice(1)
+    include mixins/searchResults
+    +searchResults
   include mixins/scripts
   +scripts
