@@ -4,6 +4,7 @@ const routes = [
     require('./routes/owners'),
     require('./routes/pets'),
     require('./routes/vaccines'),
+    require('./routes/search'),
 ]
 
 // Add access to the app and db objects to each route

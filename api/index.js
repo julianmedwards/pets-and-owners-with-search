@@ -17,6 +17,7 @@ app.use(express.json())
 app.use(morgan('combined'))
 
 app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*')
     res.header('Content-Type', 'application/json')
     next()
 })
@@ -27,8 +28,8 @@ const {vaccineData, petOwnerData} = require('./server/config/defaultData')
 
 // drop and resync with { force: true },
 // comment/delete insertDefaultData() to not duplicate data if removing.
-db.sequelize.sync({force: true}).then(() => {
-    insertDefaultData(vaccineData, petOwnerData)
+db.sequelize.sync().then(() => {
+    // insertDefaultData(vaccineData, petOwnerData)
 
     app.listen(PORT, () => {
         console.log('Express API listening on port:', PORT)
